@@ -1,0 +1,69 @@
+﻿@model LoginViewModel 
+
+@{
+    ViewData["Title"] = "Teacher-Login";
+    var returnUrl = ViewBag.ReturnUrl;
+}
+
+<div class="RYTS-19-main-container RYTS-19-main-19">
+   <a asp-action="index" asp-controller="home">
+    <div class="RYTS-19-frame-1">
+        <div class="RYTS-19-frame-2">
+        </div>
+        <div class="RYTS-19-frame-3">
+            <span class="RYTS-19-ryt">RYT</span><span class="RYTS-19-reward-your-teacher">Reward your Teacher</span>
+        </div>
+    </div>
+    </a>
+    <div class="RYTS-19-frame-4">
+        <div class="RYTS-19-frame-5">
+            <div class="RYTS-19-frame-6">
+                <div class="RYTS-19-frame-7">
+                    <span class="RYTS-19-login-account">Login to your account</span>
+                    <div asp-validation-summary="All"></div>
+                    <form method="post" asp-action="Login" asp-controller="Account"
+                          asp-route-returnUrl="@returnUrl">
+                        <div class="RYTS-19-frame-8">
+
+                            <div class="RYTS-19-frame-9">
+                                <span class="RYTS-19-text">Email</span>
+                                <div class="RYTS-19-button-default RYTS-19-Style-image">
+                                    <img src="~/images/email.png" />
+                                    <input asp-for="Email" placeholder="Type your email" class="RYTS-19-button-default-input RYTS-19-inputplaceholder-19" />
+                                </div>
+                            </div>
+                            <div class="RYTS-19-frame-a">
+                                <span class="RYTS-19-text-password">Password</span>
+                                <div class="RYTS-19-button-default-b RYTS-19-Style-image">
+                                    <img src="~/images/key.png" />
+                                    <input asp-for="Password" placeholder="Type your Password" class="RYTS-19-button-default-input-c RYTS-19-inputplaceholder-19" />
+                                </div>
+                                <button class="RYTS-19-default-button" type="submit">
+                                    <span class="RYTS-19-login">Login</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                <a asp-action="ForgotPassword" asp-controller="Account"><span class="RYTS-19-forgot-password">Forgot password?</span></a>
+            </div>
+            <div class="RYTS-19-frame-d">
+                
+                <div class="RYTS-19-frame-e">
+                    <div class="RYTS-19-divider"></div>
+                    <span class="RYTS-19-or">Or</span>
+                    <div class="RYTS-19-divider-f"></div>
+                </div>
+                <div class="RYTS-19-button-default-10 RYTS-19-Style-image">
+                    <img src="~/images/google.png" />
+                    <button class="RYTS-19-text-google RYTS-19-stylebutton-19">Google</button>
+                    <button class="RYTS-19-button-default-input-11 RYTS-19-inputplaceholder-19"></button>
+                </div>
+            </div>
+        </div>
+        <div class="RYTS-19-text-12">
+            <span class="RYTS-19-dont-have-account">Don’t have an account? </span><a asp-action="signup" class="RYTS-19-sign-up">Sign Up</a>
+        </div>
+    </div>
+</div>

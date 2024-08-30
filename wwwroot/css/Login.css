@@ -1,0 +1,541 @@
+﻿.RYTS-19-main-container {
+    overflow: hidden;
+}
+
+.RYTS-19-main-container {
+    box-sizing: border-box;
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+}
+
+.RYTS-19-stylebutton-19 {
+    outline: 0;
+}
+
+.RYTS-19-Style-image img {
+    width: 20px;
+    height: 20px;
+}
+
+.RYTS-19-inputplaceholder-19 {
+    margin-left: 45px;
+}
+
+.RYTS-19-stylebutton-19 {
+    align-items: center;
+    margin-bottom: 3px;
+    background: white;
+    border: none;
+}
+
+.RYTS-19-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    position: relative;
+    width: 598px;
+    margin: 0 auto;
+}
+
+.RYTS-19-main-container {
+    width: 100%;
+    height: 100vh;
+    background: #D0D5DD;
+}
+
+.RYTS-19-frame-1 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 188px;
+    margin-top: 20px;
+}
+
+.RYTS-19-frame-2 {
+    flex-shrink: 0;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(/images/header-logo.png) no-repeat center;
+    background-size: cover;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.RYTS-19-frame-3 {
+    flex-shrink: 0;
+    position: relative;
+    width: 141px;
+    height: 44px;
+    font-size: 0px;
+    z-index: 2;
+}
+
+.RYTS-19-ryt {
+    display: block;
+    position: relative;
+    height: 34px;
+    margin: 0 0 0 0;
+    color: #6938ef;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.0px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 4;
+}
+
+.RYTS-19-reward-your-teacher {
+    display: block;
+    position: relative;
+    height: 20px;
+    margin: -10px 0 0 0;
+    color: #98a1b2;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 3;
+}
+
+.RYTS-19-frame-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 40px;
+    position: relative;
+    width: 598px;
+    padding: 60px 100px 60px 100px;
+    background: #ffffff;
+    z-index: 5;
+}
+
+.RYTS-19-frame-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 40px;
+    position: relative;
+    width: 398px;
+    z-index: 6;
+}
+
+.RYTS-19-frame-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 398px;
+    z-index: 7;
+}
+
+.RYTS-19-frame-7 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 32px;
+    position: relative;
+    width: 398px;
+    z-index: 8;
+}
+
+.RYTS-19-login-account {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 34px;
+    color: #101828;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.0px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 9;
+}
+
+.RYTS-19-frame-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 16px;
+    position: relative;
+    width: 398px;
+    z-index: 10;
+}
+
+.RYTS-19-frame-9 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 398px;
+    z-index: 11;
+}
+
+.RYTS-19-text {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #101828;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 12;
+}
+
+.RYTS-19-button-default {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 398px;
+    padding: 12px 16px 12px 16px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    z-index: 13;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.RYTS-19-icon-email {
+    flex-shrink: 0;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: url(.images/email.png) no-repeat center;
+    background-size: cover;
+    z-index: 14;
+    overflow: hidden;
+}
+
+.RYTS-19-type-email {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #98a1b2;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+.RYTS-19-button-default-input {
+    flex-shrink: 0;
+    position: absolute;
+    width: 398px;
+    height: 44px;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    z-index: 16;
+    outline: none;
+}
+
+.RYTS-19-frame-a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 398px;
+    z-index: 17;
+}
+
+.RYTS-19-text-password {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #101828;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 18;
+}
+
+.RYTS-19-button-default-b {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 398px;
+    padding: 12px 16px 12px 16px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    z-index: 19;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.RYTS-19-key-alt {
+    flex-shrink: 0;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: url(.images/key.png) no-repeat center;
+    background-size: cover;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.RYTS-19-type-password {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #98a1b2;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 21;
+}
+
+.RYTS-19-button-default-input-c {
+    flex-shrink: 0;
+    position: absolute;
+    width: 398px;
+    height: 44px;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    z-index: 22;
+    outline: none;
+}
+
+.RYTS-19-forgot-password {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #1570ef;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 23;
+}
+
+.RYTS-19-frame-d {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 24px;
+    position: relative;
+    width: 398px;
+    z-index: 24;
+}
+
+.RYTS-19-default-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 398px;
+    padding: 12px 16px 12px 16px;
+    cursor: pointer;
+    background: #6938ef;
+    border: none;
+    z-index: 25;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.RYTS-19-login {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #ffffff;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 26;
+}
+
+.RYTS-19-frame-e {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 14px;
+    position: relative;
+    width: 398px;
+    z-index: 27;
+}
+
+.RYTS-19-divider {
+    flex-shrink: 0;
+    position: relative;
+    width: 177px;
+    height: 1px;
+    background: #d0d5dd;
+    z-index: 28;
+}
+
+.RYTS-19-or {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #101828;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 29;
+}
+
+.RYTS-19-divider-f {
+    flex-shrink: 0;
+    position: relative;
+    width: 177px;
+    height: 1px;
+    background: #d0d5dd;
+    z-index: 30;
+}
+
+.RYTS-19-button-default-10 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+    position: relative;
+    width: 398px;
+    padding: 12px 16px 12px 16px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    z-index: 31;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.RYTS-19-google {
+    flex-shrink: 0;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: url(.images/google.RYTS-19g) no-repeat center;
+    background-size: cover;
+    z-index: 32;
+    overflow: hidden;
+}
+
+.RYTS-19-text-google {
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    height: 20px;
+    color: #98a1b2;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 33;
+}
+
+.RYTS-19-button-default-input-11 {
+    flex-shrink: 0;
+    position: absolute;
+    width: 398px;
+    height: 44px;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: none;
+    z-index: 34;
+    outline: none;
+}
+
+.RYTS-19-text-12 {
+    flex-shrink: 0;
+    position: relative;
+    width: 211px;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-overflow: initial;
+    white-space: nowrap;
+    z-index: 35;
+}
+
+.RYTS-19-dont-have-account {
+    position: relative;
+    color: #101828;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.RYTS-19-sign-up {
+    position: relative;
+    color: #6938ef;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+}

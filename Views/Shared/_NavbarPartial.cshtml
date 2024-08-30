@@ -1,0 +1,269 @@
+﻿@inject UserManager<AppUser> _userManager
+@inject SignInManager<AppUser> _signInManager
+<style>
+    #navbar_bg{
+        background-color: #FFFFFF !important;
+    }
+    .ogm-btn-nav {
+        background-color: #FFFFFF !important;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 0.15px;
+        line-height: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 130px;
+        height: 46px;
+        padding-top: 13px;
+    }
+
+    .overview-navbar {
+       z-index: 100;
+    }
+
+    /* .overview-navbar-right {
+        display: flex;
+        float: right;
+    } */
+
+    .ogm-btn-nav :hover {
+        color: white;
+    }
+
+    .ogm-home-nav-flex {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+
+    .ogm-home-nav-flex .nav-item {
+        padding-right: 15px;
+        cursor: pointer;
+    }
+
+    #a-kick-left {
+        position: absolute;
+        left: 50px;
+    }
+       
+
+    .oval-shape{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+
+    .oval-shape img {
+        width: 100%;
+    }
+
+</style>
+<Partial name="_ProfileDetailPartial" />
+
+<header>
+    <nav class="navbar navbar-expand-lg" id="navbar_bg">
+        <div class="container">
+            
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNAV" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+                @if (ViewData["Title"] == "Home Page")
+                {
+                    <div id="navbarNAV" class="navbar-collapse collapse ogm-home-nav-flex p-3">
+                        <div class="nav-listing-flex-right">
+                            <a id="kick-left" class="navbar-brand mb-0 h1" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img class="d-inline-block align-top" src="~/images/ogm-main-logo.png" style="width: 141px; height: 35px;" />
+                            </a>
+                        </div>                  
+
+                        
+                        <div class="nav-listing-flex-left">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active text-center ">
+                                    <a class="nav-link text" style="color: var(--Purple-600, #6938EF)" asp-area="" asp-controller="" asp-action="">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="nav-item text-center">
+                                    <a class="nav-link text-black" asp-controller="" asp-action="">
+                                        About
+                                    </a>
+                                </li>
+                                <li class="nav-item active text-center">
+                                    <a class="nav-link text-black">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li class="nav-item active text-center" style="padding-right: 30px;">
+                                    @if (!_signInManager.IsSignedIn(User))
+                                    {
+                                        <a asp-action="login" asp-controller="account">
+                                            <span class="ryt-padding ryt-button" style="background-color:#6938EF;color:white">Log In</span>
+                                        </a>                                    
+
+                                    }
+                                </li>
+                                <li class="" styl="padding-top: 30px;">
+                                    @if (_signInManager.IsSignedIn(User))
+                                    {
+                                        <Partial name="_ThumbnailPartial" />
+
+                                    }
+
+                                </li>
+                            </ul>
+
+                        </div>                            
+
+                    </div>
+                }
+                else
+                {
+                   <div class="overview-navbar">
+                        <div class="overview-nav-left">
+                            <a id="a-kick-left" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/images/ogm-main-logo.png" style="width: 141px; height: 35px; margin-top: 10px;" />
+                            </a>
+                        </div>
+
+                        <div style="margin-left: 1050px;" class="">
+                            <Partial name="_ThumbnailPartial" />
+                        </div>
+                   </div>
+                }
+                
+        </div>
+
+    </nav>
+
+
+</header>
+
+
+
+<div class="modal fade" id="notification" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container p-5">
+                    <div class="ogm-notify-panel">
+                        <div class="ogm-notify-panel-inner">
+                            <div class="ogm-details-area">
+                                <p class="ogm-day-time">Today<p />
+                                <div class="ogm-flex-words ogm-border-around">
+                                    <p>You sent money to Babatunde<br /> <span class="ogm-day-time">12:30pm</span> </p>
+                                    <p style="color:var(--Main-Primary-color, #34A853)">Claimed</p>
+                                </div>
+
+                                <p>You funded your wallet with N60,000<br /> <span class="ogm-day-time pt">12:30pm</span> </p>
+
+                                <p class="ogm-day-time pt-3">Yesterday</p>
+                                <p>You funded your wallet with N60,000 <br /> <span class="ogm-day-time pt">12:30pm</span> </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="account_settings" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="ryts-10-modal-settings">
+                    <div class="ryts-10-">
+                        <div class="ryts-10-settings-1">
+                            <a href="#" id="view-profile-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="ryts-10-account-setting">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0001 12C9.33972 12 7.17733 9.84718 7.17733 7.19998C7.17733 4.55278 9.33972 2.39998 12.0001 2.39998C14.6605 2.39998 16.8229 4.55278 16.8229 7.19998C16.8229 9.84718 14.6605 12 12.0001 12ZM16.5313 12.8076C17.5228 12.0181 18.2875 10.9799 18.7474 9.79891C19.2073 8.61787 19.3461 7.33604 19.1497 6.08392C18.6733 2.93632 16.0429 0.417572 12.8665 0.0503722C8.48412 -0.457228 4.76652 2.93878 4.76652 7.19998C4.76652 9.46798 5.82252 11.4888 7.46892 12.8076C3.42252 14.3208 0.46812 17.874 0.00492011 22.6692C-0.0112751 22.8373 0.00780493 23.0071 0.0609321 23.1675C0.114059 23.3279 0.200069 23.4754 0.313462 23.6007C0.426855 23.7259 0.565134 23.826 0.719462 23.8948C0.87379 23.9636 1.04077 23.9994 1.20973 24C1.50588 24.0024 1.79224 23.8941 2.01267 23.6963C2.23311 23.4985 2.37172 23.2255 2.40132 22.9308C2.88492 17.5752 7.00452 14.4 12.0001 14.4C16.9957 14.4 21.1153 17.5752 21.5989 22.9308C21.6285 23.2255 21.7671 23.4985 21.9876 23.6963C22.208 23.8941 22.4944 24.0024 22.7905 24C23.5057 24 24.0625 23.3784 23.9941 22.6692C23.5321 17.874 20.5777 14.3208 16.5301 12.8076" fill="#6938EF" />
+                                </svg> Account
+                            </a>
+                        </div>
+
+                        <div class="ryts-10-settings-2">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="ryts-10-help-center-setting">
+                                    <path d="M11 18H13V16H11V18ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 12 11 11.75 11 15H13C13 12.75 16 12.5 16 10C16 7.79 14.21 6 12 6Z" fill="#6938EF" />
+                                </svg> Help Center
+                            </a>
+                        </div>
+
+                        <div class="ryts-10-settings-3">
+                            <a href="#" id="view-logout-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="ryts-10-logout-setting">
+                                    <path d="M17 8L15.59 9.41L17.17 11H9V13H17.17L15.59 14.58L17 16L21 12L17 8ZM5 5H12V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H12V19H5V5Z" fill="#6938EF" />
+                                </svg> Logout
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="logout" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="ryts-10-modal-logout">
+                    <p class="ryts-10-logout-confirmation">Logout confirmation</p>
+                    <hr class="ryts-10-hr-border-thickness">
+                    <p class="ryts-10-are-you-sure">Are you sure you want to logout from your account?</p>
+                    <div class="ryts-10-float-button-right">
+                        <a href="#" class="ryts-10-button-no" id="no-logout-btn">No</a>
+                        <a asp-action="Logout" asp-controller="Account" class="ryts-10-button-yes">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="appreciation" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="ryts-10-modal-appreciation">
+                    <div class="ryts-10-modal-corner-margin text-center">
+                        <p class="ryts-10-sent-appreciation">
+                            Mary Ogunsola sent an <br>
+                            appreciation to you.
+                        </p>
+                        <p class="ryts-10-thank-you-so-much">Hello, thank you for the reward, thank you so much.</p>
+                        <a asp-action="messages" asp-controller="dashboard" class="ryts-10-button-message-teacher">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none" class="ryts-10-message-teacher">
+                                <path d="M7.16665 10H7.17498M10.5 10H10.5083M13.8333 10H13.8416M18.0032 10C18.0032 14.1421 14.6454 17.5 10.5032 17.5C8.80623 17.5 3.00384 17.5 3.00384 17.5C3.00384 17.5 4.30317 14.3801 3.78316 13.334C3.28395 12.3297 3.00323 11.1976 3.00323 10C3.00323 5.85786 6.3611 2.5 10.5032 2.5C14.6454 2.5 18.0032 5.85786 18.0032 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>Message Teacher
+                        </a>
+                        <p class="ryts-10-back-to-dashboard"><a class="ryts-10-back-to-dashboard" asp-action="overview" asp-controller="dashboard">Back to Dashboard</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<Partial name="_PaySuccessPartial" />
+<Partial name="_FundingPartial" />

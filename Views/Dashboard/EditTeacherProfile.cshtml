@@ -1,0 +1,84 @@
+﻿@model EditTeacherProfileVM
+
+<div class="RYTS-20-semi-background">
+    <div class="RYTS-20-header-img">
+        <img src="~/Images/header-image.png" alt="Profile header image">
+        <div class="RYTS-20-header-img-profile">
+            <h3 class="RYTS-20-header-title">Profile</h3>
+        </div>
+    </div>
+    <div class="RYTS-20-edit-profile-main">
+        <div class="RYTS-20-edit-side-bar">
+            <div class="RYTS-20-edit-side-bar-child">
+                <p class="RYTS-20-edit-profile">Edit Profile</p>
+                <p class="RYTS-20-change-password">Change Password</p>
+            </div>
+            <div class="RYTS-20-divider"></div>
+        </div>
+        <div class="RYTS-20-edit-profile-formdiv">
+            <div class="RYTS-20-edit-profile-writeup-div">
+                <p class="RYTS-20-edit-profile-writeup">Edit Profile</p>
+                <p class="RYTS-20-only-you">Only you can view and edit your profile</p>
+            </div>
+            <div class="RYTS-20-form-div">
+                <div asp-validation-summary="All"></div>
+                <form method="post" asp-action="EditTeacherProfile" asp-controller="Dashboard">
+                    <input type="text" asp-for="UserId" hidden><br>
+                    <input type="text" asp-for="TeacherId" hidden><br>
+                    <div class="RYTS-20-input-divs">
+                        <label for="FirstName" class="RYTS-20-label">First Name</label>
+                        <input type="text" asp-for="FirstName" placeholder="Franca John"><br>
+                    </div> 
+                    <div class="RYTS-20-input-divs">
+                        <label for="LastName" class="RYTS-20-label">Last Name</label>
+                        <input type="text" asp-for="LastName" placeholder="Franca John"><br>
+
+                    </div>
+                    <div class="RYTS-20-input-divs">
+                        <label for="Email" class="RYTS-20-label">Email</label>
+                        <input readonly type="email" name="email" asp-for="Email" id=" email" placeholder="francajohn@gmail.com"><br>
+                    </div>
+                    <div class="RYTS-20-input-divs">
+                        <label for="Phone Number" class="RYTS-20-label">Phone Number</label>
+
+                        <input type="number" asp-for="PhoneNumber"><br>
+                    </div>
+                    <div class="RYTS-20-input-divs">
+                        <label for="" class="RYTS-20-label">Schools where you taught</label>
+                        <select asp-for="SelectedSchool">
+                            <option value="">@Model.TeachersSchool.FirstOrDefault()</option>
+                            @foreach ( var schoolTaught in SeedData.Schools)
+                            {
+                                <option value="@schoolTaught">@schoolTaught</option>
+                            }
+                        </select>
+                    </div>
+                    <br/>
+                    <div class="RYTS-20-input-divs">
+                        <label for="Years of Teaching" class="RYTS-20-label">Years of Teaching</label>
+
+                        <input type="text" asp-for="YearsOfTeaching" placeholder="e.g 2001 - 2021"><br>
+                    </div>
+                    <div class="RYTS-20-input-divs">
+                        <label for="Subjects Taught" class="RYTS-20-label">Subjects Taught</label>
+                        <select asp-for="SelectedSubject">
+                            <option value="">@Model.TeachersSubject.FirstOrDefault()</option>
+
+                            @foreach(var teacher in SeedData.Subjects)
+                            {
+                                <option value="@teacher">@teacher</option>
+                            }
+                        </select>
+                        <p id="RYTS-20-biology">Biology</p><br>
+                    </div>
+                    <div class="RYTS-20-input-divs">
+                        <label for="School Type" class="RYTS-20-label">School Type</label>
+                        <input type="text" asp-for="SchoolType" placeholder="Franca John"><br>
+                    </div>
+
+                    <button class="RYTS-20-submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,172 @@
+﻿@model MVModel
+@inject UserManager<AppUser> _userManager
+
+@{
+    ViewData["Title"] = "Messages";
+    var loggedInUserId = _userManager.GetUserAsync(User).Result.Id;
+}
+
+<div class="ryt-13-container main-div">
+    <div class="ryt-13">
+        <h2 class="ryt-13-messaging_title">Messages</h2>
+        <div class="ryt-13-inner_container">
+            <div class="ryt-13-left_inner_container">
+                <div class="ryt-13-search_area">
+                    <div class="ryt-13-search__input_area">
+                        <div class="ryt-13-search_input">
+                            <i class="ryt-13-bi bi-search icon"></i>
+                            <input type="text" class="ryt-13-form-control" id="searchTerm" placeholder="Search" oninput="searchUsers()" />
+                        </div>
+                    </div>
+                    <div class="ryt-13-left_inner_container_desc">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                            <path d="M17.5032 10.5C17.5032 14.6421 14.1453 18 10.0032 18C8.30617 18 2.50378 18 2.50378 18C2.50378 18 3.8031 14.8801 3.2831 13.834C2.78388 12.8297 2.50317 11.6976 2.50317 10.5C2.50317 6.35786 5.86103 3 10.0032 3C14.1453 3 17.5032 6.35786 17.5032 10.5Z" stroke="#6938EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p>Send message</p>
+                    </div>
+                </div>
+                <div class="ryt-13-chat_list_container">
+                    <div class="ryt-13-chat_container" style="background: var(--Purple-25, #FAFAFF);">
+                        @if (Model == null || !Model.SideThreads.Any())
+                        {
+                            <div>
+                                <p>No message threads yet.</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="container">
+                            @foreach (var chatItem in Model.SideThreads)
+                            {
+
+                                    <a class="ryt-13-chat_container_left" asp-controller="Dashboard" asp-action="Messages" asp-route-threadId="@chatItem.ThreadId">
+                                    <div class="ryt-13-pp_container">
+                                        <img src="@chatItem.PhotoUrl" class="ryt-13-profile_image" />
+                                    </div>
+                                    <div class="ryt-13-chat_info">
+                                        <h6 class="ryt-13-chatmate_left">@chatItem.Name</h6>
+                                        <p class="ryt-13-chat_snip">@chatItem.LastText</p>
+                                    </div>
+                                        <span class="time">@chatItem.TimeStamp.ToString("t")</span>
+                                </a> 
+                            }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="ryt-13-right_inner_container">
+                <div class="ryt-13-chat_area">
+                    <div class="ryt-13-chat_container_right">
+                        @if (Model == null || !Model.MessageThreads.Any())
+                        {
+                            <div>
+                                <p>No message yet.</p>
+                            </div>
+                        }
+                        else
+                        {       <div class="ryt-13-chatmate_name">
+                                <h2>@Model.receiverName</h2>
+                                </div>
+                            @foreach (var message in Model.MessageThreads)
+                            {
+
+                                if (message.UserId == loggedInUserId)
+                                {
+                                    <div class="ryt-13-chat_snip_area_right">
+                                        <div class="ryt-13-pic_image">
+                                            <div class="ryt-13-profile_image_container">
+                                                <img class="ryt-13-profile_image" alt="Image" src="@message.PhotoUrl" />
+                                            </div>
+                                            <div class="ryt-13-message_container">
+                                                <h6 style="text-align:left; width: 100%; color:#222222;" class="ryt-13-chatmate">@message.Text</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ryt-13-time_delivery">
+                                            <span>@message.TimeStamp</span>
+                                            <div class="ryt-13-checks">
+                                                <span><i class="ryt-13-bi bi-check2"></i></span>
+                                                <span><i class="ryt-13-bi bi-check2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="ryt-13-chat_snip_area_right">
+                                        <div class="ryt-13-pic_image_reverse">
+                                            <div class="ryt-13-profile_image_container">
+                                                <img class="ryt-13-profile_image" alt="Image" src="@message.PhotoUrl" />
+                                            </div>
+                                            <div class="ryt-13-message_container_reverse" style="text-align:left">
+                                                <h6  style="text-align:left; width: 100%;" class="ryt-13-chatmate">@message.Text</h6>
+                                            </div>
+                                        </div>
+                                        <div class="ryt-13-time_delivery_reverse">
+                                            <span>@message.TimeStamp</span>
+                                            <div class="ryt-13-checks">
+                                                <span><i class="ryt-13-bi bi-check2"></i></span>
+                                                <span><i class="ryt-13-bi bi-check2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                            }
+
+                            <form method="post" class="ryt-13-keyboard-input-container" asp-controller="Dashboard" asp-action="CreateMessage" asp-route-threadId="@Model.CurrentThreadInUse">
+                                <span class="ryt-13-keyboard-input-area">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/109a1a5e9169f481d4c034bc300a3a459ff04f6b4962725a241d6107f83f03e7?" class="ryt-13-emoji" />
+                                    <div class="ryt-13-emoji-right-border"></div>
+                                    
+                                    <input asp-for="NewChat" class="ryt-13-chat-keyboard-input" placeholder="Message" />
+                                    <input asp-for="SenderId" class="ryt-13-chat-keyboard-input" hidden />
+                                    <input asp-for="ReceiverId" class="ryt-13-chat-keyboard-input" hidden />
+                                </span>
+                                <button class="ryt-13-send-button" type="submit">Send</button>
+                            </form>
+                        }
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    function searchUsers() {
+        // Get search box value
+        var searchBox = document.getElementById("searchBox").value.toLowerCase();
+
+        // Simulated AJAX call to your controller action to get search results
+        $.ajax({
+            url: '@Url.Action("SearchUsers", "Chat")',
+            data: { searchBox: searchBox },
+            type: 'GET',
+            success: function (data) {
+                // Display search results
+                $('#searchResults').html(data);
+            }
+        });
+    }
+
+    function selectUser(userId) {
+        // Simulated AJAX call to your controller action to get messages
+        $.ajax({
+            url: '@Url.Action("GetMessages", "Chat")',
+            data: { userId: userId },
+            type: 'GET',
+            success: function (data) {
+                // Display selected user
+                $('#selectedUser').html('Selected User: ' + userId);
+
+                // Display messages
+                $('#messages').html(data);
+            }
+        });
+    }
+</script>

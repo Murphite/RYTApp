@@ -1,0 +1,232 @@
+
+.ryts-10-modal-settings {
+    background-color: white;
+    height: 190px;
+    width: 216px;
+    font-family: Inter;
+}
+
+.ryts-10-settings-1{
+    margin-top: 18px;
+    margin-bottom: 24px;
+    padding-top: 18px;
+    padding-left: 16px;
+}
+
+.ryts-10-settings-1 a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #101828;
+}
+
+.ryts-10-settings-1 a:hover{
+    text-decoration: none;
+    color: #6938EF;
+}
+
+a .ryts-10-account-setting {
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+
+.ryts-10-settings-2{
+    margin-top: 18px;
+    margin-bottom: 24px;
+    padding-left: 16px;
+}
+
+.ryts-10-settings-2 a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #101828;
+}
+
+.ryts-10-settings-2 a:hover{
+    text-decoration: none;
+    color: #6938EF;
+}
+
+a .ryts-10-help-center-setting{
+    margin-right: 16px;
+    margin-bottom: 4px;
+}
+
+.ryts-10-settings-3{
+    margin-top: 18px;
+    padding-left: 16px;
+}
+
+.ryts-10-settings-3 a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #101828;
+}
+
+.ryts-10-settings-3 a:hover{
+    text-decoration: none;
+    color: #6938EF;
+}
+
+a .ryts-10-logout-setting{
+    margin-right: 16px;
+    margin-bottom: 4px;
+}
+
+.ryts-10-modal-logout {
+    font-family: Inter;
+    background-color: #FFF;
+    height: 200px;
+    width: auto;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ryts-10-hr-border-thickness{
+    background-color: #E8E7E7;
+}
+
+.ryts-10-logout-confirmation{
+   padding-top: 17px;
+   margin-left: 30px;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 650;
+   line-height: 140%; 
+   letter-spacing: 0.ryts-10-15px;
+   color: #101828;
+}
+
+.ryts-10-are-you-sure{
+    padding-bottom: 95px;
+    margin-left: 30px;
+    color: #21334F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+}
+
+.ryts-10-float-button-right{
+    float:right;
+    padding-right: 30px;
+    margin-top: -65px;
+}
+
+.ryts-10-float-button-right a{
+    text-decoration: none;
+}
+
+.ryts-10-button-no{
+    border: none;
+    padding: 5px 20px 5px 20px;
+    background-color: #FCFCFC;
+    color: black;
+    border-radius: 4px;
+}
+
+.ryts-10-button-no:hover{
+   
+    background-color: #f4f1f1;
+}
+
+.ryts-10-button-yes{  
+    padding: 5px 20px 5px 20px;
+    background-color: #6938EF;
+    color: white;
+   border: none;
+   border-radius: 4px;
+   margin-left: 24px;
+}
+
+.ryts-10-button-yes:hover{  
+    background-color: #301a6d;
+    color: white;
+  
+}
+
+.ryts-10-modal-appreciation {
+    font-family: Inter;
+    background-color: white;
+    margin-bottom: 100px;
+    width: 375px;
+}
+
+.ryts-10-modal-corner-margin{
+    padding: 60px;
+}
+
+.ryts-10-sent-appreciation{
+    color: #21334F;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+    margin-bottom: 16px;
+}
+
+.ryts-10-thank-you-so-much{
+    color: #21334F;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 32px;
+}
+
+.ryts-10-button-message-teacher{
+    padding: 14px 30px 14px 30px;
+    background-color: #6938EF;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+    letter-spacing: 0.ryts-10-15px;
+    color: white;
+}
+
+
+.ryts-10-button-message-teacher:hover{
+    background-color: #301a6d;
+    color: white;
+}
+
+.ryts-10-message-teacher{
+   margin-right: 8px;
+   margin-bottom: 3px;
+}
+
+.ryts-10-message-teacher:hover{
+    background-color: #301a6d;
+}
+
+.ryts-10-back-to-dashboard{
+    padding-top: 40px;
+}
+
+.ryts-10-back-to-dashboard a{
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #101828;
+}
+
+.ryts-10-back-to-dashboard a:hover{
+    color:  #301a6d;
+}
+
+.ryts-10-modal-corner-margin a{
+    text-decoration: none;
+}

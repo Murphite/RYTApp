@@ -1,0 +1,112 @@
+﻿@model FundAndTransferCombinedViewModel
+@{
+    ViewData["Title"] = "Student Dashboard Transfer";
+}
+
+<div style="background-color: #F5F5F5;height:90vh">
+    <div style="margin-left:5%;margin-right:10%;width:85%" class="">
+        <div class="ryt-xlarge" style="font-weight:bold;margin-top:50px">
+            Good morning Franca,
+        </div>
+        <div style="margin-bottom:25px">
+            <span class="ryt-small">Welcome to your Dashboard</span>
+            <img style="width:1%" src="~/images/Emoji.png">
+        </div>
+        <div class="ryt-row">
+            <span class="ryt-row ryt-col ryt-round-xlarge ryt-card-4 ryt-padding-large" style="width:47.5%;height:120px">
+                <span class="ryt-col" style="width:45%;margin-right:27.5%">
+                    <div class="ryt-small ryt-margin-bottom"> Wallet Balance</div>
+                    <div class="ryt-xlarge" style="font-weight:bold">N60,000</div>
+                </span>
+                <span class="ryt-col " style="width:27.5%">
+                    <div class="ryt-round-xxlarge ryt-card-4 ryt-padding-small ryt-center ryt-margin-bottom ryt-text-white"
+                         style="background-color: #6938EF;">
+                        <a style="color: white; cursor:pointer; " data-bs-target="#fund" data-bs-toggle="modal">Add Money</a>
+                    </div>
+                    <div class="ryt-right-align ryt-text-green">Active</div>
+                </span>
+            </span>
+
+
+            <span class="ryt-row ryt-col ryt-round-xlarge ryt-card-4 ryt-padding-large" style="height:120px;background-color:#FEFDF0;width:47.5%;margin-left:5%">
+                <span class="ryt-col" style="width:45%;margin-right:45%">
+                    <div class="ryt-small ryt-margin-bottom"> Total money sent</div>
+                    <div class="ryt-xlarge" style="font-weight:bold">N30,000</div>
+                </span>
+                <span class="ryt-col" style="width:10%;position:asolute">
+                    <p class="ryt-round-xxlarge" style="background-color:#FEF7C3;padding:6px"><img style="width: 100%" src="~/images/RYTS-3-send.png"></p>
+                </span>
+            </span>
+        </div>
+        <div class="ryt-row" style="background-color:#F5F5F5">
+            <div style="font-weight:bold;margin-top:35px" class="ryt-col s12 ryt-margin-bottom">Transaction History</div>
+            <div class="ryts-9-frame-transfer">
+                <div class="ryts-9-frame-19">
+                    <div class="ryts-9-frame-1a">
+
+                        <div class="ryts-9-frame-1b">
+
+                            <button id="toggleButton1" class="toggle-button active ryts-9-received" onclick="toggleTable('table1', 'table2', 'toggleButton1', 'toggleButton2')">Funding</button>
+
+                            <div class="ryts-9-divider-1c-trans"></div>
+                        </div>
+                        <button id="toggleButton2" class="toggle-button ryts-9-sent" onclick="toggleTable('table2', 'table1', 'toggleButton2', 'toggleButton1')">Transfer</button>
+
+                    </div>
+                    <div class="ryts-9-divider-1d-trans"></div>
+                </div>
+
+                
+
+                <table class="ryts-9-frame-1e" id="table2" style="display: none;">
+                    <thead>
+                        <tr class="ryts-9-frame-1f">
+                            <th class="ryts-9-description-trans">Name of Teacher</th>
+                            <th class="ryts-9-amount-sent-trans">School</th>
+                            <th class="ryts-9-date-time">Amount Sent</th>
+                            <th class="ryts-9-action-trans">Date/Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model?.TransferTransactions == null)
+                        {
+                            <tr>
+                                <td class="p-5" colspan="3">You have no transfer transaction history yet</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var transfer in Model.TransferTransactions)
+                            {
+                                <tr class="ryts-9-frame-20">
+                                    <td class="ryts-9-you-sent">@transfer.NameOfTeacher</td>
+                                    <td class="ryts-9-n-21-trans">@transfer.School</td>
+                                    <td class="ryts-9-you-sent-trans">@transfer.Amount</td>
+                                    <td class="ryts-9-date-time-22-trans">@transfer.dateTime</td>
+                                </tr>
+                            }
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleTable(showTableId, hideTableId, activeButtonId, inactiveButtonId) {
+        const showTable = document.getElementById(showTableId);
+        const hideTable = document.getElementById(hideTableId);
+        const activeButton = document.getElementById(activeButtonId);
+        const inactiveButton = document.getElementById(inactiveButtonId);
+
+        showTable.style.display = 'table';
+        hideTable.style.display = 'none';
+
+        activeButton.classList.add('active');
+        inactiveButton.classList.remove('active');
+    }
+</script>

@@ -1,0 +1,153 @@
+﻿
+.rectangle {
+    margin-left: 75px;
+    margin-right: 186px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.babs-body {
+    height: 180px;
+}
+
+.rectangletext {
+    color: white;
+    font-size: 32px;
+    font: 'Inter';
+    text-align: center;
+    font-weight: 700;
+    line-height: 44.80px;
+    letter-spacing: 0.25px;
+    margin-bottom: 53px;
+    height: 45px;
+    position: absolute;
+    top: 53px;
+    bottom: 53px;
+    left: 388px;
+}
+
+.babs-form-items img {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    bottom: 8%;
+    margin-left: 360px;
+}
+
+.babs-container {
+    display: flex;
+    width: 880px;
+    margin-left: 85px;
+    margin-top: 15px;
+}
+
+.options {
+    background: white;
+    width: auto;
+    height: 120px;
+    margin-right:20px;
+    padding: 10px;
+}
+
+.babs-options-edit a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer
+}
+
+    .babs-options-edit a:hover {
+        color: purple;
+    }
+
+.babs-form-area {
+    border-left: 1px solid grey;
+    height: 610px;
+    margin-left: 20px;
+}
+
+.babs-form-details {
+    width: 478px;
+    height:566px;
+    margin-left: 20px;
+}
+
+.babs-form-items {
+    background: white;
+    height: 535px;
+    padding: 32px 40px;
+}
+
+    .babs-form-items label, .babs-form-items input {
+        display: block;
+        width: 100%;
+    }
+
+    .babs-form-items label {
+    }
+
+    .babs-form-items input {
+        height: 44px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 6px;
+        border: 1px solid #D0D5DD;
+    }
+
+        .babs-form-items input:focus {
+            outline: 1px solid #6938EF;
+            background: #EAECF0;
+        }
+
+    .babs-form-items button {
+        width: 100%;
+        height: 44px;
+        padding: 12px, 16px, 12px, 16px;
+        border-radius: 6px;
+        background: #6938EF;
+}
+
+.babs-form-items-photo button {
+    margin-top: 20px;
+    width: 100%;
+    height: 44px;
+    padding: 12px, 16px, 12px, 16px;
+    border-radius: 6px;
+    background: #6938EF;
+    border: none;
+}
+
+.babs-form-area .card {
+    height: auto;
+    width: 300px;
+}
+
+.babs-form-items-photo input {
+    margin-top: 50px;
+}
+
+
+.save-button {
+    font: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+}
+
+.babs-edit {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.babs-view {
+    color: #98A2B3;
+    margin-top: 0;
+}
+
+.babs-options-edit:hover {
+    color: #6938EF;
+}
+
+.babs-options-edit:hover {
+    color: #6938EF;
+}

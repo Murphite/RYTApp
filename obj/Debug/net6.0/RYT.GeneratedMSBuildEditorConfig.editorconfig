@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RYT
+build_property.RootNamespace = RYT
+build_property.ProjectDir = C:\Users\Admin\Downloads\RewardYourTeacher-App-master\RewardYourTeacher-App-master\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Downloads\RewardYourTeacher-App-master\RewardYourTeacher-App-master
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/wwwroot/Images/Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxJbWFnZXNcTm90aWZpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Account/RegisterCongrats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckNvbmdyYXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Account/SignUP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVVAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Account/TeacherSignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxUZWFjaGVyU2lnblVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Account/TeacherSignUpStep2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxUZWFjaGVyU2lnblVwU3RlcDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/EditTeacherProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRUZWFjaGVyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/Messages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE1lc3NhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/Overview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXE92ZXJ2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/SendReward.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFNlbmRSZXdhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/Teachers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFRlYWNoZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/Transfer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFRyYW5zZmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/UpdateImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFVwZGF0ZUltYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Dashboard/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_AccountCreatedSuccessfullyPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BY2NvdW50Q3JlYXRlZFN1Y2Nlc3NmdWxseVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_FundingPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GdW5kaW5nUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_NavbarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXJQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_NavEditProfilePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZFZGl0UHJvZmlsZVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_PaymentSDKGatewayPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXltZW50U0RLR2F0ZXdheVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_PaySuccessPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXlTdWNjZXNzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_ProfileDetailPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9maWxlRGV0YWlsUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_SendRewardPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZW5kUmV3YXJkUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_SendRewardSuccessPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZW5kUmV3YXJkU3VjY2Vzc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_TeacherAccountCreatedPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UZWFjaGVyQWNjb3VudENyZWF0ZWRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_ThumbnailPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UaHVtYm5haWxQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Downloads/RewardYourTeacher-App-master/RewardYourTeacher-App-master/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-t0vnscxaxy

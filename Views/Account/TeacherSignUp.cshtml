@@ -1,0 +1,86 @@
+﻿@model TeacherSignUpStep1ViewModel
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+<div class="ryts-11-container-main">
+    <div class="ryts-11-container py-5">
+
+        <a asp-action="index" asp-controller="home">
+            <div class="ryts-11-logo-container"><img src="~/Images/ryts-11-RewardYourTeacherLogo.svg" alt=""></div>
+        </a>
+        <div class="ryts-11-form">
+            <div class="ryts-11-sign-up">
+                <div class="ryts-11-title">
+                    <h3>Create an account</h3>
+                    <p class="ryts-11-light-p">Step 1 of 2</p>
+                </div>
+                <div class="ryts-11-p" style="visibility:hidden;">
+                    <p>Update your profile information</p>
+                </div>
+                <form method="post" asp-action="TeacherSignUp">
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="UserType" class="mb-2">User Type</label><br>
+                        <div class="merged-buttons-panel">
+                            <a asp-action="SignUp" asp-controller="Account">Student</a>
+                            <a asp-action="TeacherSignUp" asp-controller="Account">Teacher</a>
+                        </div>
+                    </div>
+                    <div asp-validation-summary="All"></div>
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="user-name" class="mb-2">Name</label><br>
+                        <input type="text" class="ryts-11-input" placeholder="Type your full name" asp-for="Name">
+                        <div class="ryts-11-icon">
+                            <i class="uil uil-user icon"></i>
+                        </div>
+                    </div>
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="user-email" class="mb-2">Email</label><br>
+                        <input type="email" class="ryts-11-input " placeholder="Type your email" asp-for="Email">
+                        <div class="ryts-11-icon">
+                            <i class="uil uil-envelope icon"></i>
+                        </div>
+                    </div>
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="user-password" class="mb-2">Password</label><br>
+                        <input type="password" class="ryts-11-input" required minlength="6" placeholder="Type your password" asp-for="Password">
+                        <div class="ryts-11-icon">
+                            <img src="~/Images/ryts-11-key-alt.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="UserType" class="mb-2">Schools where you taught</label><br>
+                        <select class="select-user-type ryts-11-input" placeholder="Type name of school" asp-for="SelectedSchool">
+                            <option value="Placeholder">Select name of school</option>
+                            @foreach (var school in Model.SchoolsTaught)
+                            {
+                                <option value="@school">@school</option>
+                            }
+                        </select>
+                        <div class="ryts-11-icon">
+                            <i><img src="~/Images/ryts-11-school.svg" alt=""></i>
+                        </div>
+                    </div>
+
+                    <button class="ryts-11-form-btn" type="submit">Continue</button>
+                </form>
+
+                <div class="ryts-11-line"></div>
+
+                <a href="#" class="ryts-11-google-main-a">
+                    <div class="ryts-11-google-main">
+                        <i><img src="~/Images/ryts-11-google.png" alt=""></i>
+                        <span>Google</span>
+                    </div>
+                </a>
+
+            </div>
+            <div class="ryts-11-login py-4 mt-3">
+                <span>Already have an account? </span>
+                <span class="ps-2 "><a asp-action="Login">Login</a></span>
+            </div>
+        </div>
+    </div>
+</div> 

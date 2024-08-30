@@ -1,0 +1,243 @@
+﻿body {
+}
+
+
+
+.my-container{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    width:80%;
+    height:fit-content;
+    
+    
+    
+}
+
+.back-img {
+    background: url("/Image/background.png");
+    display: flex;
+    justify-content: space-between;
+    width: 880px;
+    height: 130px;
+    align-items: center;
+    margin-left:30px;
+    border-radius:15px;
+}
+.text-area{
+    width:351px;
+    height:70px;
+    color: #ffffff;
+    margin-left:40px;
+    font-family:Inter;
+    font-size: 24px;
+    
+}
+.image-area{
+    width:190px;
+    height:130px;
+    margin-right:20px;
+    
+}
+
+.image-area img {
+    width: 190px;
+    height: 130px;
+}
+
+.text-money {
+    color: goldenrod;
+}
+.search-all{
+    width:500px;
+    height:50px;
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    margin-top:10px;
+    margin-left:30px;
+}
+.search-all p{
+    font-family:Inter;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.search-list {
+    width: 880px;
+}
+
+div .search-list-icon {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.search-list-box {
+    position: relative;
+    left: 0px;
+}
+
+.search-list-icon {
+    position: absolute;
+    left: 0px;
+    width: 7%;
+    height: 100%;
+    align-content: center;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.search-list-input {
+    background: #ffffff;
+    color: #98A2B3;
+    position: absolute;
+    left: 0px;
+    width: 728px;
+    height: 44px;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.search-list-input:focus {
+    outline: 1px solid #6938EF;
+}
+
+.search-list-btn {
+    position: absolute;
+    right: 0px;
+    background: #ffffff;
+    color: #98A2B3;
+    width: 120px;
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #6938EF;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.search-list-btn:hover {
+    background: #6938EF;
+    color: #ffffff;
+}
+
+
+.LOS-main{
+    background-color:#cdcaca0a;
+    width:880px;
+    height:370px;
+    margin-top:30px;
+    margin-left:30px;
+}
+.LOS-main .LOS-inner{
+    height:350px;
+    margin-bottom:30px;
+    background-color:white;
+    
+}
+.LOS-upper-text {
+    background-color: #EAECF0;
+    color: black;
+    font-size: 14px;
+    font-family:Inter;
+    font-weight: 600;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-bottom: 5px;
+    height: 40px;
+    text-align: left;
+}
+.LOS-inner .LOS-inner-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+    height: 287px;
+    
+}
+.LOS-list {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #afabab;*/
+    height: 20px;
+    width: 810px;
+    margin: 5px 10px 5px 10px;
+    margin-top: 0px;
+}
+.LOS-list img{
+    height: 15px;
+    width:15px;
+    padding-right:5px;
+    padding-top:5px;
+   
+}
+    .LOS-list p {
+        font-size:14px;
+        color:black;
+        font-family:Inter;
+        font-weight:400;
+        
+    }
+.LOS-inner-list hr {
+    border-bottom: 0.5px solid #cdcaca4c;
+    margin-left:5px;
+}
+
+.pagination{
+    height:56px;
+    width:500px;
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    margin-left:170px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.pagination a {
+    width: 86px;
+    height: 36px;
+    padding: 8px, 14px, 8px, 14px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    padding-top: 5px;
+}
+
+.prev{
+    width:80px;
+    height:28px;
+    margin:10px 5px 5px 5px;
+    background-color:white;
+    border-radius:7px;
+    font-size:12px;
+    font-weight:500;
+    font-family:Inter;
+    border: 0.5px solid #cdcaca;
+}
+
+.next {
+    width: 50px;
+    height: 28px;
+    margin: 10px 5px 5px 5px;
+    background-color: white;
+    border-radius: 7px;
+    border: 0.5px solid #cdcaca;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.page-numb {
+    font-weight: 500;
+    font-size: 12px;
+    font-family:Inter;
+    margin: 12px 5px 2px 5px;
+}

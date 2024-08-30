@@ -1,0 +1,229 @@
+﻿body {
+
+}
+
+#neo-teacher-info-container {
+    width: 880px;
+    height: auto;
+    margin-left: 30px;
+    font: 'Inter';
+}
+
+.neo-arrow-back {
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.neo-arrow-back:hover {
+    color: #6938EF;
+}
+
+.neo-arrow {
+    width: 20px;
+    height: 20px;
+}
+
+.neo-school-name {
+    margin: 30px 0 30px auto;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+}
+
+#searchCriteria {
+    border: 0.5px solid #6938EF;
+    border-radius: 5px;
+}
+
+#searchCriteria:hover {
+    border: 1px solid #6938EF;
+    outline: none;
+}
+
+#neo-teacher-search {
+    width: 880px;
+}
+
+div .neo-search-icon {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+#neo-search-box {
+    position: relative;
+    left: 0px;
+}
+
+.neo-search-icon {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    height: 100%;
+    align-content: center;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#neo-search-input {
+    background: #ffffff;
+    color: #98A2B3;
+    position: absolute;
+    left: 0px;
+    width: 728px;
+    height: 44px;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+#neo-search-input:focus {
+    outline: 1px solid #6938EF;
+}
+
+#neo-search-btn {
+    position: absolute;
+    right: 0px;
+    background: #ffffff;
+    color: #98A2B3;
+    width: 120px;
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #6938EF;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+#neo-search-btn:hover {
+    background: #6938EF;
+    color: #ffffff;
+}
+
+button .neo-img {
+    width: 17px;
+    height: 20px;
+    padding-bottom: 3px;
+}
+
+.neo-table-container {
+    margin-top: 50px;
+    width: 880px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.neo-table-container th {
+    background: #EAECF0;
+    text-align: center;
+    width: 880px;
+    height: 50px;
+    font-weight: 600;
+    text-decoration: solid;
+}
+
+.neo-table-container th:first-child {
+    text-align: left;
+    padding-left: 10%;
+}
+
+.neo-table-container td {
+    font-weight: 400;
+    padding: 8px;
+}
+
+.neo-table-container tr {
+    font-size: 14px;
+    width: 864px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-bottom-color: #EEEEEE;
+}
+
+.neo-table-container tr td:first-child {
+    text-align: left;
+    padding-left: 70px;
+}
+
+
+.neo-table-container tr:first-child {
+    width: 880px;
+    height: 50px;
+    border-bottom: none;
+    background: #ffffff;
+}
+
+.neo-table-container tr:last-child {
+    border-bottom: none;
+    height: 50px;
+}
+
+.neo-table-container tr a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.neo-table-container tr a:hover {
+    color: #6938EF;
+}
+
+#neo-pagination-panel {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 525px;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#neo-pagination p {
+    padding: 10px;
+}
+
+.neo-previous-page {
+    width: 86px;
+    height: 36px;
+    padding-left: 12px;
+    padding-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    align-content: center;
+}
+
+.neo-next-page {
+    width: 86px;
+    height: 36px;
+    padding-left: 25px;
+    padding-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    align-content: center;
+}
+
+.neo-previous-page:hover, .neo-next-page:hover {
+    background: #6938EF;
+    color: #ffffff;
+}
+
+
+

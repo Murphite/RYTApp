@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Edit Profile";
+}
+@model EditProfileVM
+
+<div class="babs-body">
+    <div class="rectangle">
+        <img src="~/Images/Rectangle 307.jpg" />
+        <div class="rectangletext">
+            <p>Profile</p>
+        </div>
+    </div>
+   <div class="babs-container">
+
+        <Partial name="_NavEditProfilePartial" />
+
+       <div class="babs-form-area">
+            <div class="babs-form-details">
+                <P class="babs-edit">Edit Profile</P>
+                <p class="babs-view">Only you can view and edit your profile</p>
+                <form method="post" asp-action="EditProfile" class="babs-form-items">
+                    <input type="hidden" value="Id" id="Id" />
+                    <label>First Name</label>
+                    <input asp-for="FirstName" type="text" placeholder="Franca " />
+                    <br />
+                    <label>Last Name</label>
+                    <input asp-for="LastName" type="text" placeholder="John" />
+                    <br />
+                    <label>Email</label>
+                    <input asp-for="Email" readonly type="text" placeholder="francajohn@gmail.com" />
+                    <br />
+                    <label>Phone Number</label>
+                    <input asp-for="PhoneNumber" type="text" placeholder="07045889234" />
+                    <br />
+                    <label>Name of school</label>
+
+
+
+                    <input asp-for="NameofSchool" type="text" value="Mainland Senior High School" readonly id="textInput" />
+
+                    <img id="hiddenImage" src="~/Images/pen-square.jpg" alt="Hidden Image" onclick="enableEditing()" />
+
+
+
+
+                    <br />
+                    <button type="submit" class="save-button">Save</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // JavaScript function to enable editing in the input
+    function enableEditing() {
+        var inputElement = document.getElementById("textInput");
+
+        // Remove the "readonly" attribute to enable editing
+        inputElement.removeAttribute("readonly");
+
+        // Focus on the input to bring cursor
+        inputElement.focus();
+    }
+</script>

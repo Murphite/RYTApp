@@ -1,0 +1,76 @@
+﻿@model TeacherSignUpStep2ViewModel
+
+@{
+    ViewData["Title"] = "SignUp-Step2";
+}
+
+<div class="ryts-11-container-main">
+    <div class="ryts-11-container py-5">
+        <a asp-action="index" asp-controller="home">
+            <div class="ryts-11-logo-container"><img src="~/Images/ryts-11-RewardYourTeacherLogo.svg" alt=""></div>
+        </a>
+        <div class="ryts-11-form">
+            <div class="ryts-11-sign-up">
+                <div class="ryts-11-title">
+                    <h3>Create an account</h3>
+                    <p class="ryts-11-light-p">Step 2 of 2</p>
+                </div>
+                <div class="ryts-11-p">
+                    <p>Update your profile information</p>
+                </div>
+                <div asp-validation-summary="All"></div>
+                <form method="post" enctype="multipart/form-data" asp-action="TeacherSignUpStep2">
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="teaching-year" class="mb-2">Years of Teaching</label><br>
+                        <input type="text" class="ryts-11-input select-user-type-single" placeholder="e.g 1993 - 2000" asp-for="YearsOfTeaching">
+
+                    </div>
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="subjects" class="mb-2">Subjects Taught</label><br>
+                        <select class="select-user-type select-user-type-single ryts-11-input" placeholder="Type name of subject" asp-for="SelectedSubject">
+                            <option value="Placeholder">Select name of subject</option>
+                            @foreach (var subject in Model.listOfSubjectsTaught)
+                            {
+                                <option value="@subject">@subject</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="school-type" class="mb-2">School Type</label><br>
+                        <select class="select-user-type select-user-type-single ryts-11-input" placeholder="Select School Type" asp-for="SelectedSchoolType">
+                            <option value="Placeholder">Select name of school Type</option>
+                            @foreach (var school in Model.ListOfSchoolTypes)
+                            {
+                                <option value="@school">@school</option>
+                            }
+                        </select>
+
+                    </div>
+                    <div class="ryts-11-input-main mb-3">
+                        <label for="upload-picture" class="mb-2">Upload NIN</label><br>
+                        <input type="file" class="ryts-11-input" placeholder="Upload picture" name="NINUploadImage" asp-for="NINUploadImage">
+                        <div class="ryts-11-icon">
+                            <img src="~/Images/ryts-11-image-square.svg" alt="">
+                        </div>
+                    </div>
+
+                    <button class="ryts-11-form-btn" type="submit">Sign Up</button>
+                </form>
+
+                <div class="ryts-11-line"></div>
+
+                <a href="#" class="ryts-11-google-main-a">
+                    <div class="ryts-11-google-main">
+                        <i><img src="~/Images/ryts-11-google.png" alt=""></i>
+                        <span>Google</span>
+                    </div>
+                </a>
+            </div>
+            <div class="ryts-11-login py-4 mt-3">
+                <span>Already have an account? </span>
+                <span class="ps-2 "><a asp-action="Login">Login</a></span>
+            </div>
+        </div>
+    </div>
+</div>

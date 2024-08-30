@@ -1,0 +1,25 @@
+﻿@model TeacherListViewModel
+<div class="modal fade" id="sendReward" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Send Reward</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ryts-2-font">
+                    <form method="Post" asp-action="SendReward" asp-controller="Dashboard" id"sendRewardForm" class="form-ryts-2">
+                        <h5>Amount to Send</h5>
+                        <input asp-for="RewardToSend.userId" id="userid-input"  hidden/>
+                        <div>
+                            <input asp-for="RewardToSend.Amount" id="amt-to-send-input"  class="input-layer-ryts-2" placeholder="N10,000">
+                        </div>
+                        <button class="btn-ryts-2" data-bs-target="#pay_success" type="button" id="send-rwd-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

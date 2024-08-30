@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RYT", "RYT.csproj", "{0636E4B4-3855-4BDE-92E4-D33982E3F013}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0636E4B4-3855-4BDE-92E4-D33982E3F013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0636E4B4-3855-4BDE-92E4-D33982E3F013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0636E4B4-3855-4BDE-92E4-D33982E3F013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0636E4B4-3855-4BDE-92E4-D33982E3F013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E91061F-E6AF-4E54-9C5B-69EF30A09719}
+	EndGlobalSection
+EndGlobal

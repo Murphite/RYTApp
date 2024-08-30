@@ -1,0 +1,271 @@
+﻿body {
+}
+.RYTS-20-semi-background {
+    background-color: #f5f5f5;
+    height: 80rem;
+    overflow: hidden;
+    /* position: relative; */
+    width: 100%;
+    padding-top: 37px;
+}
+
+.RYTS-20-header-img {
+    position: relative;
+    left: 56px;
+    width: 880px;
+    height: 151px;
+    bottom: 50px;
+}
+
+/*.RYTS-20-header-img img {
+    border-radius: ;
+}*/
+
+.RYTS-20-header-img-profile {
+    position: absolute;
+    top: 50px;
+    left: 388px;
+    text-align: center;
+}
+
+.RYTS-20-header-title {
+    color: #ffffff;
+    font-family: Inter, 'Source Sans Pro';
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 35px;
+    letter-spacing: 0.25px;
+}
+
+.RYTS-20-edit-profile-main {
+    align-items: center;
+    display: flex;
+    height: 990px;
+    /* border: 1px solid black; */
+    left: 377px;
+    position: absolute;
+    top: 14.7rem;
+    width: 739px;
+}
+
+.RYTS-20-edit-side-bar {
+    align-items: flex-start;
+    display: flex;
+    flex-shrink: 0;
+    height: 100%;
+    margin-right: 8rem;
+    padding-left: 0rem;
+    /* border: 1px solid black; */
+}
+
+.RYTS-20-edit-side-bar-child {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0rem 3rem 0rem 0rem;
+    /* border: 1px solid black; */
+}
+
+.RYTS-20-edit-profile {
+    color: #6938ef;
+    flex-shrink: 0;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.RYTS-20-change-password {
+    color: #101828;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.RYTS-20-divider {
+    background-color: #d0d5dd;
+    flex-shrink: 0;
+    height: 1070px;
+    width: 0.1rem;
+}
+
+.RYTS-20-edit-profile-formdiv {
+    flex-shrink: 0;
+    height: calc(100% - 0rem);
+    margin-top: 0rem;
+    width: 30rem;
+    /*border: 1px solid black;*/
+    /* margin-right: 15rem; */
+    position: absolute;
+    left: 17rem;
+    /*padding-top: -15px;*/
+}
+
+.RYTS-20-edit-profile-writeup-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-top: 0rem;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.RYTS-20-edit-profile-writeup {
+    color: #101828;
+    flex-shrink: 0;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1rem;
+    margin-bottom: 0.4rem;
+    position: absolute;
+    bottom: 2.7rem;
+    white-space: nowrap;
+}
+
+.RYTS-20-only-you {
+    color: #98a2b2;
+    flex-shrink: 0;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 2rem;
+}
+
+.RYTS-20-form-div {
+    align-items: center;
+    background-color: #ffffff;
+    border: solid 0.01rem #d0d5dd;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 40px 32px 40px;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.RYTS-20-input-divs {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 100%;
+    /* border: solid 1px black; */
+}
+
+.RYTS-20-label {
+    color: #101828;
+    display: flex;
+    flex-shrink: 0;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: nowrap;
+    margin-bottom: 0.6rem;
+}
+
+form input {
+    background-color: #ffffff;
+    border: solid 1px #d0d5dd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 44px;
+    overflow: hidden;
+    padding: 12px 16px 12px 16px;
+    position: relative;
+    width: 398px;
+    /* margin-bottom: 1rem; */
+    gap: 8px;
+}
+
+form select {
+    border: solid 1px #d0d5dd;
+    padding: 12px 16px 12px 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.RYTS-20-upload-part ::placeholder {
+    color: #98A2B3;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    position: absolute;
+    top: 15px;
+    left: 80px;
+}
+
+.RYTS-20-upload-part {
+    padding-left: 35px;
+    background: url("~/Images/upload-image.png") no-repeat left;
+    background-size: 15px;
+    background-position: 18px 13px;
+    margin-bottom: 37px;
+}
+/*.RYTS-20-upload-parts {
+    flex-direction: row;
+    align-items: center;
+}*/
+button {
+    width: 398px;
+    height: 44px;
+    border-radius: 6px;
+    padding: 12px 16px 12px 16px;
+    gap: 8px;
+    background-color: #6938ef;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#email {
+    background-color: #eaecf0;
+}
+
+::placeholder {
+    color: #98A2B3;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+.RYTS-20-input-divs p {
+    background-color: #eee;
+    border-radius: 20px;
+    width: 140px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #101828;
+    font-family: Inter, 'Source Sans Pro';
+    margin-top: 4px;
+}
+
+#RYTS-20-biology {
+    background-color: #eee;
+    border-radius: 20px;
+    width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #101828;
+    font-family: Inter, 'Source Sans Pro';
+}

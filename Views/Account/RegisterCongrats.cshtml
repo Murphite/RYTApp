@@ -1,0 +1,20 @@
+﻿@{
+    string name = string.IsNullOrEmpty(ViewBag.Name) ? "User" : ViewBag.Name;
+}
+
+
+
+<div class="card shadow border-primary-subtle p-4 pt-4 m-auto mt-5 w-50">
+    <div class="card-header m-lg-0 py-3 px-3" style="background: #6938EF">
+        <div class="row text-center mt-3">
+            <h3 style="color:white">Congratulations @name</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mt-4">
+            <p>
+                An account confirmation link should be sent to you already via the email you provided us on registration, if the email is correct and still accessible to you 
+             </p>
+        </div>
+    </div>
+</div>

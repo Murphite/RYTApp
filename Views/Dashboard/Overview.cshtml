@@ -1,0 +1,175 @@
+﻿@model OverviewViewModel
+@inject UserManager<AppUser> _userManager;
+@{
+    ViewData["Title"] = "Overview";
+    var user = _userManager.GetUserAsync(User).Result;
+    var userRoles = _userManager.GetRolesAsync(user).Result;
+    string tableToShow = ViewBag.TableToShow;
+}
+
+<Partial name="_FundingPartial" />
+<Partial name="_PaymentSDKGatewayPartial" />
+
+<div class="ryts-9-container-RYTS-9">
+    <div class="ryts-9-welcome-panel">
+        <div id="ryts-9-greeting-area">
+            <div class="ryts-9-greetings">Good afternoon @if(user != null){ <span>@user.FirstName @user.LastName</span> },</div>
+            <p id="ryts-9-greeting-area2">Welcome to your Dashboard <img id="ryts-9-emoji-image" src="/Images/ryts-9-emoji.png" /></p>
+        </div>
+    </div>
+
+    <div class="ryts-9-wallet-panel">
+        <div class="ryts-9-balance-panel">
+            <div class="ryts-9-balance-area1">
+                <div id="ryts-9-wallet-balance">My Wallet Balance</div>
+                @if (userRoles.Any(x => x.ToLower().Equals("student")))
+                {
+                    <button id="ryts-9-withdraw-area" data-bs-toggle="modal" data-bs-target="#fund">Add Money</button>
+                }
+                else if (userRoles.Any(x => x.ToLower().Equals("teacher")))
+                {
+                    <button id="ryts-9-withdraw-area" data-bs-toggle="modal" data-bs-target="#withdraw">Withdraw</button>
+                }
+            </div>
+            <div class="ryts-9-balance-area2">
+                <p id="ryts-9-funds-area">@Model.Balance</p>
+                @if (Model.Status.ToLower().Equals("active"))
+                {
+                    <p id="ryts-9-active-area">@Model.Status</p>
+                }else{
+                    <p id="ryts-9-active-area" style="color:red;">@Model.Status</p>
+                }
+            </div>
+        </div>
+        @if (userRoles.Any(x => x.ToLower().Equals("student")))
+        {
+            <div class="ryts-9-received-panel">
+                <div class="ryts-9-inner-received-panel">
+                    <div class="ryts-9-money-box">
+                        <p id="ryts-9-total-money">Total money sent</p>
+                        <p id="ryts-9-total-money-area">@Model.AmountSent</p>
+                    </div>
+                    <div class="ryts-9-button-area">
+                        <img id="ryts-9-send-icon" src="/Images/ryt-9-icon.png" />
+                    </div>
+                </div>
+            </div>
+
+        }
+        else if (userRoles.Any(x => x.ToLower().Equals("teacher")))
+        {
+            <div class="ryts-9-received-panel">
+                <div class="ryts-9-inner-received-panel">
+                    <div class="ryts-9-money-box">
+                        <p id="ryts-9-total-money">Total money received</p>
+                        <p id="ryts-9-total-money-area">@Model.AmountReceived</p>
+                    </div>
+                    <div class="ryts-9-button-area">
+                        <img id="ryts-9-send-icon" src="/Images/ryt-9-icon.png" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="ryt-row" style="background-color:#F5F5F5">
+        <div style="font-weight:bold;margin-top:35px" class="ryt-col s12 ryt-margin-bottom">Transaction History</div>
+        <div class="ryts-9-frame-transfer">
+            @if (userRoles.Any(x => x.ToLower().Equals("student")))
+            {
+                <div class="ryts-9-frame-19">
+                    <div class="ryts-9-frame-1a">
+
+                        <div class="ryts-9-frame-1b">
+
+                            <button id="toggleButton1" class="toggle-button active ryts-9-received" onclick="toggleTable('table1', 'table2', 'toggleButton1', 'toggleButton2')">Funding</button>
+
+                            @* <div class="ryts-9-divider-1c"></div> *@
+                        </div>
+                        <button id="toggleButton2" class="toggle-button ryts-9-sent" onclick="toggleTable('table2', 'table1', 'toggleButton2', 'toggleButton1')">Transfer</button>
+
+                    </div>
+                    <div class="ryts-9-divider-1d"></div>
+                </div>
+                @if (tableToShow.ToLower().Equals("fund"))
+                {
+                    <table class="ryts-9-frame-1e" id="table1">
+                        <thead>
+                            <tr class="ryts-9-frame-1f">
+                                <th class="ryts-9-description-transfer">Description</th>
+                                <th class="ryts-9-amount-sent-transfer">Amount</th>
+                                <th class="ryts-9-date-time-transfer">Date/Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model?.MyFundings == null)
+                            {
+                                <tr>
+                                    <td class="p-5" colspan="3">You have no funding transaction history yet</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                @foreach (var transaction in Model.MyFundings)
+                                {
+                                    <tr class="ryts-9-frame-20">
+                                        <td class="ryts-9-you-sent">@transaction.Description</td>
+                                        <td class="ryts-9-n-21-transfer">@transaction.Amount</td>
+                                        <td class="ryts-9-date-time-22-transfer">@transaction.CreatedOn</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                }
+                @if (tableToShow.ToLower().Equals("sent"))
+                {
+
+                }
+            }
+            else if (userRoles.Any(x => x.ToLower().Equals("teacher")))
+            {
+                <div class="ryts-9-frame-19">
+                    <div class="ryts-9-frame-1a">
+
+                        <div class="ryts-9-frame-1b">
+
+                            <button id="toggleButton1" class="toggle-button active ryts-9-received" onclick="toggleTable('table1', 'table2', 'toggleButton1', 'toggleButton2')">Received</button>
+
+                            @* <div class="ryts-9-divider-1c"></div> *@
+                        </div>
+                        <button id="toggleButton2" class="toggle-button ryts-9-sent" onclick="toggleTable('table2', 'table1', 'toggleButton2', 'toggleButton1')">Sent</button>
+
+                    </div>
+                    <div class="ryts-9-divider-1d"></div>
+                </div>
+                @if (tableToShow.ToLower().Equals("received"))
+                {
+
+                }
+                @if (tableToShow.ToLower().Equals("transfer"))
+                {
+
+                }
+            }
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+    function toggleTable(showTableId, hideTableId, activeButtonId, inactiveButtonId) {
+        const showTable = document.getElementById(showTableId);
+        const hideTable = document.getElementById(hideTableId);
+        const activeButton = document.getElementById(activeButtonId);
+        const inactiveButton = document.getElementById(inactiveButtonId);
+
+        showTable.style.display = 'table';
+        hideTable.style.display = 'none';
+
+        activeButton.classList.add('active');
+        inactiveButton.classList.remove('active');
+    }
+</script>

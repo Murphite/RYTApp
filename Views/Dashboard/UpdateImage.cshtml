@@ -1,0 +1,56 @@
+﻿@model RYT.Models.ViewModels.UploadImageVM
+@inject SignInManager<AppUser> _signInManager;
+@inject UserManager<AppUser> _userManager;
+@{
+    ViewData["Title"] = "Edit Profile Picture"; 
+    var user = _userManager.GetUserAsync(User).Result;
+}
+
+<div class="babs-body">
+    <div class="rectangle">
+        <img src="~/Images/Rectangle 307.jpg" />
+        <div class="rectangletext"><p>Profile</p></div>
+    </div>
+   <div class="babs-container">
+       
+            <Partial name="_NavEditProfilePartial" />
+      
+       <div class="babs-form-area" style="padding: 20px;">
+           <p class="babs-edit">Upload Profile Picture</p>
+           <p class="babs-view">Only you can view and edit your profile</p>          
+           <div class="babs-form-details">
+               
+                <div class="card">
+                    @if (Model == null)
+                    {
+                        @if (_signInManager.IsSignedIn(User))
+                        {
+                            <img src="@user.PhotoUrl" asp-append-version=true>
+                        }
+                        else
+                        {
+                            <img src="/Images/user-cover.jpg" asp-append-version=true>
+                        }
+                    }
+                    else
+                    {
+                        var photoUrl = Model.PhotoUrl;
+                        <img src="@photoUrl" asp-append-version=true>
+                    }
+                </div>
+                
+                <form method="post" asp-action="UpdateImage" enctype="multipart/form-data" class="babs-form-items-photo">
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                    <input type="file" asp-for="Image" asp-append-version/>
+                    <span asp-validation-for="Image" class="text-danger"></span>
+
+            
+                    <button type="submit" class="save-button">Upload</button>      
+                </form>
+           </div>
+        
+
+       </div>
+   </div>
+</div>

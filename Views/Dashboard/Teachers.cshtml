@@ -1,0 +1,77 @@
+﻿@model RYT.Models.ViewModels.TeacherListViewModel
+
+@{
+    ViewData["Title"] = "All Teachers";
+    Model.CurrentSchool = Model.SchoolName;
+}
+
+<Partial name="_ProfileDetailPartial" />
+<Partial name="_SendRewardPartial" />
+<Partial name="_SendRewardSuccessPartial" />
+
+<div id="neo-teacher-info-container">
+    <a asp-action="sendReward" class="neo-arrow-back">
+        <img class="neo-img" src="~/images/arrow-back.png" /> Go back
+    </a>
+    <p class="neo-school-name">Teachers - @Model.SchoolName</p>
+
+    @* Mainland Senior High School *@
+
+    <div id="neo-teacher-search">
+        <form asp-action="Teachers" method="post" id="neo-search-box">
+            <input id="neo-search-input" name="SearchKeyword" placeholder="Search" value="@Model.SearchKeyword" />
+            <input hidden asp-for="CurrentSchool" />
+            <img class="neo-search-icon" src="~/images/search-alt-1.png" />
+
+            <button id="neo-search-btn" type="submit">
+                <img class="neo-search-icon" src="~/images/search-alt-1.png" />Search
+            </button>
+        </form>
+    </div>
+
+    <br />
+    <br />
+
+    <table class="neo-table-container">
+        <tr id="neo-table-head">
+            <th>Name</th>
+            <th>Position</th>
+            <th>Period of Teaching</th>
+        </tr>
+
+
+        @foreach (var teacher in Model.TeacherList)
+        {
+                <tr>
+                    <td><a class="username-col" name="@teacher.UserId" data-bs-target="#sendReward" data-bs-toggle="modal">@(teacher.User?.FirstName + " " + teacher.User?.LastName)</a></td>
+                    <td>@teacher.Position</td>
+                    <td>@teacher.YearsOfTeaching</td>
+                </tr>
+        }
+
+    </table>
+
+
+    @{
+        var prevDisabled = !Model.PreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.NextPage ? "disabled" : "";
+    }
+
+    <div id="neo-pagination-panel">
+        <a asp-action="Teachers" asp-route-page="@(Model.CurrentPage - 1) " class="neo-previous-page"> Previous </a>
+        <p>Page @Model.CurrentPage of @Model.TotalPages</p>
+        @if (Model.CurrentPage > 1)
+        {
+            <a asp-action="Teachers" asp-route-page="@(Model.CurrentPage - 1) @prevDisabled" class="neo-previous-page"> Previous </a>
+        }
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <a asp-action="Teachers" asp-route-page="@(Model.CurrentPage + 1) @nextDisabled" class="neo-next-page"> Next </a>
+        }
+        else
+        {
+            <span style="cursor:pointer" class="neo-next-page">Next</span>
+        }
+    </div>
+
+</div>

@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using RYT.Models.Entities
+@inject UserManager<AppUser> _userManager;
+@{
+    var user = _userManager.GetUserAsync(User).Result;
+}
+<div class="modal fade" id="profile" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Profile details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ryts-2-font">
+                    <span class="ryts-2-span">
+                        <div class="ryts-2-div-3">
+                            <div style="width:70px; height: 70px; border-radius:100%; overflow:hidden">
+                            @if (user == null){
+                                <img loading="lazy"
+                                style="width:100%;"
+                                         src="~/Images/user-cover.jpg"
+                                 class="ryts-2-img-2" />
+                            }else{
+                                 <img loading="lazy"
+                                style="width:100%;"
+                                         src="@user.PhotoUrl"
+                                 class="ryts-2-img-2" />
+                            }
+                            </div>
+                            <span class="ryts-2-span-3">
+                                <div class="ryts-2-div-4" id="space-1">
+                                    @if (user != null)
+                                    {
+                                        @user.FirstName @user.LastName
+
+                                    }</div>
+                                <div class="ryts-2-div-5">Not added</div>
+                                <div class="ryts-2-div-6">Not added</div>
+                            </span>
+                        </div>
+                        <div class="ryts-2-div-7">About</div>
+                        <div class="ryts-2-div-8">
+                            I’m @if (user != null)
+                            {
+                                @user.FirstName @user.LastName
+
+                            }. I've just joined this department. I've had the pleasure of meeting some of you already and look forward to getting to know everyone here better.
+                        </div>
+                        <div class="ryts-2-div-9">Other info</div>
+                        <div class="ryts-2-div-10">
+                            @if (user != null)
+                            {
+                                @user.Email
+
+                            }
+                        </div>
+                        <div class="ryts-2-div-11">
+                            @if (user != null)
+                            {
+                                @user.PhoneNumber
+
+                            }
+                        </div>
+                        <div class="ryts-2-div-12">
+                            <a role="button" class="ryts-2-span-4" asp-action="sendReward" asp-controller="dashboard">
+                                <div class="ryts-2-span-4-1">Send Reward</div>
+                            </a>
+                            <a asp-action="messages" role="button" class="ryts-2-span-5"><div class="ryts-2-span-5-1">Message</div></a>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

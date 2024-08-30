@@ -1,0 +1,202 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ryts-11-container-main{
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+}
+
+.ryts-11-container{
+    width: 598px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ryts-11-logo-container, .ryts-11-login{
+    display: flex;
+    justify-content: center;
+}
+
+.ryts-11-login a{
+    color: var(--Purple-600, #6938EF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.ryts-11-title{
+    display:flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: auto;
+    width: 100%;
+}
+.ryts-11-title h3{
+    color: var(--Main-Text, #101828);
+
+/* Headline Bold - 24 */
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 33.6px */
+}
+
+.ryts-11-title p{
+    color: var(--Grey-400, #98A2B3);
+
+/* Button Normal - 14 */
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+}
+
+.ryts-11-form{
+    width: 100%;
+    background: white;
+    margin-top: 40px;
+    padding: 40px 100px;
+}
+
+.ryts-11-input-main{
+    position: relative;
+}
+
+.ryts-11-input{
+    width: 100%; 
+    outline: 0;
+    border: 1px solid #98A2B3;
+    border-radius: 8px;
+    padding: 10px 16px;
+    padding-left: 50px;
+    background: transparent;
+    font-size: 14px;
+    color: #98A2B3;
+}
+
+
+.ryts-11-input::placeholder{
+    color: #98A2B3;
+}
+
+.select-user-type-single{
+    padding-left: 16px;
+}
+
+.ryts-11-icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    font-size: 20px;
+    color:  #98A2B3;
+}
+
+.ryts-11-input:focus{
+    color: #6938EF;
+    border-color: #6938EF;
+}
+
+.ryts-11-input:focus ~ .ryts-11-icon{
+    color: #6938EF;
+}
+
+.dropdown-toggle{
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+
+.ryts-11-select-box{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #98A2B3;
+    font-size: 1rem;
+}
+
+
+
+.ryts-11-form-btn {
+    height: 44px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #6938EF;
+  }
+  .ryts-11-form-btn:hover {
+    background: rgb(130, 106, 251);
+  }
+
+
+.ryts-11-line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+.ryts-11-line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #8b8b8b;
+    padding: 0 15px;
+}
+
+
+.ryts-11-google-main{
+    width: 100%; 
+    outline: 0;
+    border: 1px solid #98A2B3;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background: transparent;
+    font-size: 14px;
+    color: #98A2B3;
+}
+.ryts-11-google-main-a{
+    text-decoration: none;
+}
+.ryts-11-google-main img{
+    padding-right: 10px;
+    width: 35px;
+}
+
+
+
+
